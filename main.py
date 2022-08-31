@@ -1,7 +1,10 @@
+from tkinter import Y
+
+
 destinations = ["Paris", "Barcelona", "Tokyo", "Quito", "Hermosa Beach"]
 restaurants = ["La Quixote", "La Pan", "Sushitogo", "Brother's Burritos"]
 transportion = ["Airplane", "Cruise", "Train", "Car", "Bike"]
-entertainment = ["The Louve", "Drink wine and eat tapas", "Go to the hot springs", "Go to El Panecillo", "Go to the beach"]
+entertainment = ["Traveling to the Louve", "Drinking wine and eat tapas", "Going to the hot springs", "Going to El Panecillo", "Going to the beach"]
 
 print("Welcome to the Day Trip Generator! Not sure of where to travel? Don't worry, we can help with that, you have come to the right place! Sit back and enjoy :)")
 
@@ -76,10 +79,29 @@ Clients_restaurant = choose_restaurant()
 Clients_transport = choose_transportation()
 Clients_entertainment = choose_entertainment()
 
-def finalize_day_trip():
+def display_tentative_trip():
     print("Congrats! We have completed generating your day trip. Now let's just confirm that this is the trip you wanted.")
     print("Destination: " + Clients_destination)
     print("Transportation: " + Clients_transport)
     print("Restaurant: " + Clients_restaurant)
     print("Entertainment: " + Clients_entertainment)
+
+display_tentative_trip()
+
+def confirm_trip():
+    confirmed_trip = input("Would you like to finalize this once in a lifetime trip?")
+    if confirmed_trip == 'y':
+        print(f"Prepare for your dream vacation to come alive! YOu will be arriving in {Clients_destination} by {Clients_transport}, where you will spend the day {Clients_entertainment}. You will end this amazing day dining in style at {Clients_restaurant}, a local favorite.")
+    else:
+        confirmed_trip == 'N'
+        print("Not to worry, we will try again")
+        Clients_destination = choose_destination()
+        Clients_restaurant = choose_restaurant()
+        Clients_transport = choose_transportation()
+        Clients_entertainment = choose_entertainment()
+        display_tentative_trip()
+
+confirm_trip()
+
+#line 94 clients destination isn't being substaniated before it's getting called. Need to fix.'
 
