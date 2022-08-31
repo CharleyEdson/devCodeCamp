@@ -43,19 +43,43 @@ def choose_transportation():
     confirmation = False
     while confirmation is False:
     
-        for restaurant in restaurants:
-            chosen_restaurant = input(f"We have selected {restaurant} for your destination. Does this suit your fancy? Enter y/n: ")
-            if chosen_restaurant == 'y':
+        for transport in transportion:
+            chosen_transport = input(f"We have selected {transport} for your destination. Does this suit your fancy? Enter y/n: ")
+            if chosen_transport == 'y':
                 
-                print("Awesome! Glad you have decided on a Restaurant. Bone-Apple-Tee. Let's move on!")
-                final_restaurant = restaurant
+                print("Awesome! Glad you have decided on a mode of transport. Safe travels! Let's move on!")
+                final_transport = transport
                 confirmation = True
-                return final_restaurant
+                return final_transport
                 break
             else:
-                print("Oh, sorry you didn't like your restaurant. No worries, we can try something else!")
+                print("Oh, sorry you didn't like your mode of transportation. No worries, we can try something else!")
+
+def choose_entertainment():
+    confirmation = False
+    while confirmation is False:
+    
+        for entertain in entertainment:
+            chosen_entertain = input(f"We have selected {entertain} for your destination. Does this suit your fancy? Enter y/n: ")
+            if chosen_entertain == 'y':
+                
+                print("Awesome! Glad you have decided on your entertainment. This will be a true delight! Let's move on!")
+                final_entertain = entertain
+                confirmation = True
+                return final_entertain
+                break
+            else:
+                print("Oh, sorry you didn't like your entertainment pick. No worries, we can try something else!")
 
 Clients_destination = choose_destination()
 Clients_restaurant = choose_restaurant()
+Clients_transport = choose_transportation()
+Clients_entertainment = choose_entertainment()
 
+def finalize_day_trip():
+    print("Congrats! We have completed generating your day trip. Now let's just confirm that this is the trip you wanted.")
+    print("Destination: " + Clients_destination)
+    print("Transportation: " + Clients_transport)
+    print("Restaurant: " + Clients_restaurant)
+    print("Entertainment: " + Clients_entertainment)
 
