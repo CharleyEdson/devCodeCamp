@@ -72,7 +72,6 @@ def confirm_transportations():
 def confirm_entertainment():
     entertainment_confirmation = False
     while entertainment_confirmation == False:
-        randomized_entertainment
         randomized_entertainment = rand_entertainemnt()
         entertainment_reponse = input(f"We have selected {randomized_entertainment} for your entertainment. Does this suit your fancy? Enter y/n: ")
         if entertainment_reponse == 'y':
