@@ -62,7 +62,7 @@ def confirm_transportations():
         transportation_reponse = input(f"We have selected {randomized_transportation} for your mode of transportation. Does this suit your fancy? Enter y/n: ")
         if transportation_reponse == 'y':
             transportation_confirmation == True
-            print("Awesome! Glad you have decided on transportation. Will be there in no time! Let's move on!")
+            print("Awesome! Glad you have decided on transportation. We will be there in no time! Let's move on!")
             return randomized_transportation
         else:
             transportation_confirmation = False
